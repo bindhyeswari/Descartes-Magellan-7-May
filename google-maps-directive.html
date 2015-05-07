@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        [data-googlemap] {
+            height: 25vh;
+        }
+    </style>
+    <script src="bower_components/angular/angular.js"></script>
+    <script>
+        angular.module('myApp', []).directive('googlemap', function () {
+            return  {
+                restrict: 'A',
+                compile: function (element, attrs) {
+                    // download the googlemaps script and load it
+
+                    // run the initialize function
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div data-googlemap></div>
+</body>
+</html>
