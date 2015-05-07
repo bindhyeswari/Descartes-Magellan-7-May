@@ -8,8 +8,12 @@
             height: 100%;
         }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
     <script>
+
+        window.init = function () {
+            console.log('test');
+        };
 
         function createLoadPromise() {
             return new Promise(function (resolve, reject) {
@@ -40,17 +44,20 @@
             // hence the data[1]
             var coords = data[1].coords;
 
+
+
             // loading the google map goes here ...
             var map = new google.maps.Map(document.body, {
                 zoom: 16,
                 center: new google.maps.LatLng(coords.latitude, coords.longitude)
             });
-
         });
 
     </script>
+
 </head>
 <body>
 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=init"></script>
 </body>
 </html>
